@@ -15,7 +15,7 @@
         <img class="logo" width="101" height="18" src="img/logo-text.svg" alt="Кэт энерджи">
       </a>
       <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="main-navigation__toggle" type="button" hidden><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-navigation__links">
           <li class="main-navigation__item"><a class="main-navigation__link main-navigation__link--current">главная</a></li>
           <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">каталог продукции</a></li>
@@ -70,12 +70,13 @@
             <dd class="example__value">5 кг</dd>
             <dt class="example__parameter">затрачено времени</dt>
             <dd class="example__value">60 дней</dd>
+            <dt class="example__parameter">Затраты на питание</dt>
+            <dd class="example__value">15 000 РУБ.</dd>
           </dl>
-          <p class="example__cost">Затраты на питание: <span class="example__price">15 000 РУБ.</span></p>
         </div>
         <img class="example__image example__image--before" width="311" height="232" src="img/before-mobile.png" alt="полный кот">
         <img class="example__image example__image--after"  width="251" height="240" src="img/after-mobile.png" alt="худой кот">
-        <div class="example__photo-toggle">
+        <div class="example__photo-toggle" hidden>
           <button class="example__button" type="button">было</button>
           <div class="example__scale">
             <div class="example__scale-toggle"></div>
@@ -95,9 +96,21 @@
           <img width="128" height="24" src="img/logo-text.svg" alt="Кэт энерджи">
         </a>
         <ul class="page-footer__social-links">
-          <li><a class="page-footer__social-link page-footer__social-link_vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-          <li><a class="page-footer__social-link page-footer__social-link_insta" href="#"><span class="visually-hidden">Инстаграмм</span></a></li>
-          <li><a class="page-footer__social-link page-footer__social-link_facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li>
+            <a class="page-footer__social-link page-footer__social-link_vk" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__social-link page-footer__social-link_insta" href="#">
+              <span class="visually-hidden">Инстаграмм</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__social-link page-footer__social-link_facebook" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
         </ul>
         <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy<img width="27" height="34" src="img/html-academy.svg" alt="логотип HTML Academy"></a>
 
