@@ -1,0 +1,29 @@
+.about__section-title {
+  margin-top: 27px;
+  margin-bottom: 0;
+}
+
+.about__list {
+  margin-top: 40px;
+  margin-bottom: 46px;
+  padding: 0;
+  list-style: none;
+}
+
+.about__item {
+  position: relative;
+  max-width: 200px;
+  min-height: 60px;
+  padding-left: 80px;
+  margin-bottom: 22px;
+
+  &::before {
+    content: " ";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--basic-green);
+  }
+}

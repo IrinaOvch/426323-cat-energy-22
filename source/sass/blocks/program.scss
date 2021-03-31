@@ -1,0 +1,28 @@
+.program {
+  background-color: var(--basic-grey);
+  padding: 20px;
+}
+
+.program__name {
+  font-size: 24px;
+  line-height: 37px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.program__description {
+  margin-top: 29px;
+  margin-bottom: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--dark-grey);
+}
+
+.program__link {
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--basic-black);
+  text-decoration: none;
+  margin-top: 19px;
+  display: block;
+}
