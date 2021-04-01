@@ -4,6 +4,12 @@
   list-style: none;
 }
 
+.main-navigation__item {
+  &:last-child .main-navigation__link {
+    border-bottom: 1px solid hsl(0deg, 0%, 90%);
+  }
+}
+
 .main-navigation__link {
   display: block;
   color: hsl(0deg, 0%, 0%);
