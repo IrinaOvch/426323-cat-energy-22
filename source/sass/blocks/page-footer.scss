@@ -1,10 +1,16 @@
 .page-footer__contacts {
-  display: flex;
-  justify-content: space-between;
   padding-top: 28px;
   padding-bottom: 26px;
-  margin: 0 auto;
-  max-width: 280px;
+  background-color: var(--basic-grey);
+}
+
+.page-footer__contacts--main-page {
+  background-color: var(--basic-white);
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-footer__text {
