@@ -21,7 +21,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -87,16 +86,18 @@
 
 .main-form__input {
   width: 100%;
-  padding: 13px 19px 9px;
+  padding: 10px 19px 12px;
   margin-left: 10px;
   border: 1px solid var(--medium-grey);
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--special-dark-grey);
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
 
   &::placeholder {
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--special-dark-grey);
-    text-transform: uppercase;
-    font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+    color: inherit;
+    opacity: inherit;
   }
 }
 
