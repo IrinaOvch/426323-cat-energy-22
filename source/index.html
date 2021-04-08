@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
@@ -10,19 +11,19 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo logo">
-        <img class="logo" width="34" height="38" src="img/logo-mobile.svg" alt="логотип магазина Кэт энерджи">
-        <img class="logo" width="101" height="18" src="img/logo-text.svg" alt="Кэт энерджи">
-      </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button" hidden><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-navigation__links">
-          <li class="main-navigation__item"><a class="main-navigation__link" aria-current="page">главная</a></li>
-          <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">каталог продукции</a></li>
-          <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">подбор программы</a></li>
-        </ul>
-      </nav>
+    <header class="page-header page__leveler">
+        <a class="page-header__logo logo">
+          <img class="logo" width="34" height="38" src="img/logo-mobile.svg" alt="логотип магазина Кэт энерджи">
+          <img class="logo" width="101" height="18" src="img/logo-text.svg" alt="Кэт энерджи">
+        </a>
+        <nav class="main-navigation">
+          <button class="main-navigation__toggle" type="button" hidden><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-navigation__links">
+            <li class="main-navigation__item"><a class="main-navigation__link" aria-current="page">главная</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="catalog.html">каталог продукции</a></li>
+            <li class="main-navigation__item"><a class="main-navigation__link" href="form.html">подбор программы</a></li>
+          </ul>
+        </nav>
     </header>
 
     <main>
@@ -69,61 +70,65 @@
       </section>
 
       <section class="example">
-        <div class="page__leveler">
-          <h2 class="example__section-title section-title">Живой пример</h2>
-          <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="example__stats">
-            <div class="example__wrapper">
-              <dt class="example__parameter">снижение веса</dt>
-              <dd class="example__value">5 кг</dd>
+        <div class="page__leveler example__container">
+          <div>
+            <h2 class="example__section-title section-title">Живой пример</h2>
+            <p class="example__description description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <dl class="example__stats">
+              <div class="example__wrapper">
+                <dt class="example__parameter">снижение веса</dt>
+                <dd class="example__value">5 кг</dd>
+              </div>
+              <div class="example__wrapper">
+                <dt class="example__parameter">затрачено времени</dt>
+                <dd class="example__value">60 дней</dd>
+              </div>
+              <div class="example__wrapper">
+                <dt class="example__parameter">Затраты на питание</dt>
+                <dd class="example__value">15 000 РУБ.</dd>
+              </div>
+            </dl>
+          </div>
+          <div>
+            <img class="example__image example__image--before example__image--hidden" width="311" height="232" src="img/before-mobile.png" alt="полный кот">
+            <img class="example__image example__image--after"  width="251" height="240" src="img/after-mobile.png" alt="худой кот">
+            <div class="example__photo-toggle toggle" hidden>
+              <button class="toggle__button" type="button">было</button>
+              <div class="toggle__scale">
+                <div class="toggle__scale-toggle"></div>
+              </div>
+              <button class="toggle__button" type="button">стало</button>
             </div>
-            <div class="example__wrapper">
-              <dt class="example__parameter">затрачено времени</dt>
-              <dd class="example__value">60 дней</dd>
-            </div>
-            <div class="example__wrapper">
-              <dt class="example__parameter">Затраты на питание</dt>
-              <dd class="example__value">15 000 РУБ.</dd>
-            </div>
-          </dl>
-          <img class="example__image example__image--before example__image--hidden" width="311" height="232" src="img/before-mobile.png" alt="полный кот">
-          <img class="example__image example__image--after"  width="251" height="240" src="img/after-mobile.png" alt="худой кот">
-          <div class="example__photo-toggle" hidden>
-            <button class="example__button" type="button">было</button>
-            <div class="example__scale">
-              <div class="example__scale-toggle"></div>
-            </div>
-            <button class="example__button" type="button">стало</button>
           </div>
         </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts page-footer__contacts--main-page">
-        <div class="page__leveler page-footer__wrapper">
-          <p class="page-footer__text">приглашаем к сотрудничеству дилеров!</p>
-          <p class="page-footer__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="page-footer__contacts contacts contacts--main-page">
+        <div class="contacts__wrapper">
+          <p class="contacts__text">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
         </div>
       </div>
-      <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003128!2d30.32085871617589!3d59.93871916905414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sse!4v1616778035432!5m2!1sru!2sse" height="362" allowfullscreen="" loading="lazy"></iframe>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003128!2d30.32085871617589!3d59.93871916905414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sse!4v1616778035432!5m2!1sru!2sse" height="362" allowfullscreen="" loading="lazy"></iframe>
       <div class="page-footer__social">
-        <div class="page__leveler">
+        <div class="page-footer__wrapper page__leveler">
           <a class="page-footer__logo logo">
             <img width="128" height="24" src="img/logo-text.svg" alt="Кэт энерджи">
           </a>
-          <ul class="page-footer__social-links">
+          <ul class="page-footer__social-links social-links">
             <li>
-              <a class="page-footer__social-link page-footer__social-link_vk" href="#">
+              <a class="page-footer__social-link social-link social-link--name_vk" href="#">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li>
-              <a class="page-footer__social-link page-footer__social-link_insta" href="#">
+              <a class="page-footer__social-link social-link social-link--name_insta" href="#">
                 <span class="visually-hidden">Инстаграмм</span>
               </a>
             </li>
             <li>
-              <a class="page-footer__social-link page-footer__social-link_facebook" href="#">
+              <a class="page-footer__social-link social-link social-link--name_facebook" href="#">
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>

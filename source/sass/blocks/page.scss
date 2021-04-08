@@ -4,10 +4,19 @@
 
 .page__body {
   margin: 0 auto;
-  max-width: 320px;
+  // max-width: 320px;
 }
 
 .page__leveler {
-  max-width: 280px;
+  // max-width: 280px;
+  padding: 0 20px 0;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 0 30px 0;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 110px 0;
+  }
 }

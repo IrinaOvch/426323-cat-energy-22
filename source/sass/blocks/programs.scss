@@ -1,6 +1,11 @@
 .programs__list {
   padding: 0;
   list-style: none;
+
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs__program {
