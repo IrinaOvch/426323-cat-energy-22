@@ -1,14 +1,30 @@
 .program {
   background-color: var(--basic-grey);
-  padding: 20px;
+  padding: 30px 52px 22px 20px;
+
+  @media (min-width: 768px) {
+    padding: 77px 60px 57px 52px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 570px;
+    box-sizing: border-box;
+  }
 }
 
 .program__name {
   font-size: 24px;
   line-height: 37px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 0;
+  font-weight: normal;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 
 .program__description {
@@ -16,6 +32,13 @@
   margin-bottom: 0;
   padding-bottom: 23px;
   border-bottom: 1px solid var(--dark-grey);
+
+  @media (min-width: 768px) {
+    margin-top: 24px;
+    padding-bottom: 0;
+    margin-bottom: 48px;
+    border-bottom: none;
+  }
 }
 
 .program__link {
@@ -25,4 +48,10 @@
   text-decoration: none;
   margin-top: 19px;
   display: block;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 0;
+  }
 }
