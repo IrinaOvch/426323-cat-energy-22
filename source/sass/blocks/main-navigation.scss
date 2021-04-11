@@ -47,6 +47,11 @@
   @media (min-width: 1440px) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.main-navigation--main-page .main-navigation__link {
+  @media (min-width: 1440px) {
     color: var(--basic-white);
   }
 }

@@ -1,6 +1,11 @@
 .program-selection {
   padding-top: 27px;
   padding-bottom: 32px;
+
+  @media (min-width: 768px) {
+    padding-top: 65px;
+    padding-bottom: 85px;
+  }
 }
 
 .program-selection__section-title {
@@ -14,4 +19,15 @@
   text-transform: uppercase;
   margin-top: 37px;
   margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 323px;
+    margin-top: 54px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 56px;
+  }
 }
