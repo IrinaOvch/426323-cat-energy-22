@@ -51,6 +51,7 @@
   color: var(--special-dark-grey);
   text-transform: uppercase;
   font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  box-sizing: border-box;
 
   &::placeholder {
     color: inherit;
