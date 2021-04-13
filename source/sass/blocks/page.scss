@@ -4,22 +4,21 @@
 
 .page__body {
   margin: 0 auto;
-  // max-width: 320px;
 }
 
 .page__leveler {
-  // max-width: 280px;
-  padding-left: 20px;
-  padding-right: calc(20px - 100vw + 100%);
+  --scrollbar-width: calc(100vw - 100%);
+  --indent: 20px;
+
+  padding-left: var(--indent);
+  padding-right: calc(var(--indent) - var(--scrollbar-width));
   margin: 0 auto;
 
   @media (min-width: 768px) {
-    padding-left: 30px;
-    padding-right: calc(30px - 100vw + 100%);
+    --indent: 30px;
   }
 
   @media (min-width: 1440px) {
-    padding-left: 110px;
-    padding-right: calc(110px - 100vw + 100%);
+    --indent: 110px;
   }
 }
