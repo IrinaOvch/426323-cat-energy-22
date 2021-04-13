@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page__leveler">
       <a class="page-header__logo logo" href="index.html">
         <img class="logo" width="34" height="38" src="img/logo-mobile.svg" alt="логотип магазина Кэт энерджи">
         <img class="logo" width="101" height="18" src="img/logo-text.svg" alt="Кэт энерджи">
@@ -24,11 +25,11 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1 class="section-title">Каталог продукции</h1>
+    <main class="content">
+      <h1 class="section-title page__leveler content__section-title">Каталог продукции</h1>
       <section class="main-catalog">
         <h2 class="visually-hidden">Основные товары</h2>
-        <ul class="main-catalog__list">
+        <ul class="main-catalog__list page__leveler">
           <li class="product">
             <div class="product__wrapper">
               <a class="product__link" href="#">
@@ -218,7 +219,6 @@
               <a class="product__button button" href="#">заказать</a>
             </div>
           </li>
-          <li>
           <li class="product">
             <div class="product__wrapper">
               <h3 class="product__name">Показать еще 100500 товаров</h3>
@@ -230,7 +230,7 @@
       </section>
       <section class="additional-catalog">
         <h2 class="additional-catalog__heading">Дополнительные товары</h2>
-        <div class="page__leveler">
+        <div class="page__leveler additional-catalog__wrapper">
           <ul class="additional-catalog__list">
             <li class="additional-product">
               <h3 class="additional-product__name">Сахарозаменитель</h3>
@@ -272,31 +272,31 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__contacts">
-        <div class="page__leveler page-footer__wrapper">
-          <p class="page-footer__text">приглашаем к сотрудничеству дилеров!</p>
-          <p class="page-footer__adress description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="page-footer__contacts contacts">
+        <div class="contacts__wrapper">
+          <p class="contacts__text">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+          <p class="contacts__adress description">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
         </div>
       </div>
-      <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003128!2d30.32085871617589!3d59.93871916905414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sse!4v1616778035432!5m2!1sru!2sse" height="362" allowfullscreen="" loading="lazy"></iframe>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003128!2d30.32085871617589!3d59.93871916905414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sse!4v1616778035432!5m2!1sru!2sse" height="362" allowfullscreen="" loading="lazy"></iframe>
       <div class="page-footer__social">
-        <div class="page__leveler">
+        <div class="page-footer__wrapper page__leveler">
           <a class="page-footer__logo logo">
             <img width="128" height="24" src="img/logo-text.svg" alt="Кэт энерджи">
           </a>
-          <ul class="page-footer__social-links">
+          <ul class="page-footer__social-links social-links">
             <li>
-              <a class="page-footer__social-link page-footer__social-link_vk" href="#">
+              <a class="page-footer__social-link social-link social-link--name_vk" href="#">
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li>
-              <a class="page-footer__social-link page-footer__social-link_insta" href="#">
+              <a class="page-footer__social-link social-link social-link--name_insta" href="#">
                 <span class="visually-hidden">Инстаграмм</span>
               </a>
             </li>
             <li>
-              <a class="page-footer__social-link page-footer__social-link_facebook" href="#">
+              <a class="page-footer__social-link social-link social-link--name_facebook" href="#">
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>

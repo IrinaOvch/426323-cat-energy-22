@@ -1,0 +1,11 @@
+.content__section-title {
+  margin-top: 29px;
+
+  @media (min-width: 768px) {
+    margin-top: 64px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 74px;
+  }
+}

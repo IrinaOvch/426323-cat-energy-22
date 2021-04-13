@@ -5,9 +5,35 @@
 .additional-catalog__heading {
   font-size: 24px;
   line-height: 24px;
+  margin-top: 25px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 68px;
+  }
 }
 
 .additional-catalog__list {
   padding: 0;
   list-style: none;
+  margin-top: 36px;
+
+  @media (min-width: 768px) {
+    margin-top: 80px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 0;
+    width: 100%;
+    margin-right: 80px;
+  }
+}
+
+.additional-catalog__wrapper {
+  @media (min-width: 1440px) {
+    display: flex;
+    padding-top: 80px;
+    justify-content: space-between;
+  }
 }

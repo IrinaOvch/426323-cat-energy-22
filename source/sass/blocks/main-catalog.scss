@@ -1,4 +1,18 @@
 .main-catalog__list {
   list-style: none;
-  padding: 0;
+  margin-top: 39px;
+
+  @media (min-width: 768px) {
+    margin-top: 83px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 59px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
 }

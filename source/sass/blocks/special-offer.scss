@@ -5,10 +5,28 @@
   padding-top: 58px;
   padding-bottom: 43px;
   box-sizing: border-box;
+  // background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    height: 200px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 289px;
+    width: 245px;
+  }
 }
 
 .special-offer__text {
   max-width: 161px;
   color: var(--basic-white);
   margin: 48px auto 0;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 }
