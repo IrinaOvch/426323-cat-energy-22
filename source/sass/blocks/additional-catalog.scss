@@ -26,14 +26,14 @@
   @media (min-width: 1440px) {
     margin-top: 0;
     width: 100%;
-    margin-right: 80px;
+    grid-column: 1 / 4;
   }
 }
 
 .additional-catalog__wrapper {
   @media (min-width: 1440px) {
-    display: flex;
-    padding-top: 80px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
