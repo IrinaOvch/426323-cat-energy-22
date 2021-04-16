@@ -2,22 +2,13 @@
   position: relative;
   background-color: var(--special-grey);
   padding-top: 27px;
+  padding-bottom: 39px;
 
   @media (min-width: 768px) {
     background-color: var(--basic-white);
     border-top: 1px solid var(--medium-grey);
-
     padding-top: 43px;
-
-    // &::after {
-    //   content: " ";
-    //   width: 100%;
-    //   height: 462px;
-    //   position: absolute;
-    //   bottom: 0;
-    //   background-color: var(--special-grey);
-    //   z-index: -1;
-    // }
+    background-image: linear-gradient(transparent 462px, var(--special-grey) 462px);
   }
 }
 
@@ -149,6 +140,22 @@
   }
 }
 
+.example__image {
+  @media (min-width: 768px) {
+    height: 620px;
+    width: 708px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 600px;
+    height: 536px;
+  }
+}
+
 .example__image--hidden {
   display: none;
+}
+
+.example__photo-toggle {
+  margin: 0 auto;
 }
