@@ -58,13 +58,43 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: var(--basic-green);
+    background-color: var((--basic-green));
+    background-image: var(--icon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
 
     @media (min-width: 768px) {
+      width: 80px;
+      height: 80px;
       display: block;
       position: static;
       margin-top: 40px;
       margin-bottom: 31px;
     }
+  }
+}
+
+.about__item--icon-leaf {
+  &::before {
+    --icon: url("../../img/stack.svg#icon-leaf");
+  }
+}
+
+.about__item--icon-water {
+  &::before {
+    --icon: url("../../img/stack.svg#icon-tub");
+  }
+}
+
+.about__item--icon-cutlery {
+  &::before {
+    --icon: url("../../img/stack.svg#icon-eat");
+  }
+}
+
+.about__item--icon-scale {
+  &::before {
+    --icon: url("../../img/stack.svg#icon-alarm");
   }
 }
