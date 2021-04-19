@@ -7,24 +7,6 @@
   padding-right: calc(20px - calc(100vw - 100%));
 }
 
-.page-footer__social {
-  background-color: var(--basic-grey);
-  padding-top: 39px;
-  padding-bottom: 22px;
-
-  @media (min-width: 768px) {
-    padding-top: 60px;
-    padding-bottom: 66px;
-  }
-}
-
-.page-footer__wrapper {
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
 .page-footer__logo {
   margin: 0 auto 32px;
   display: block;
@@ -37,7 +19,7 @@
 }
 
 .page-footer__social-links {
-  & :last-child .page-footer__social-link {
+  & :last-child .social__link {
     margin-right: 0;
   }
 
