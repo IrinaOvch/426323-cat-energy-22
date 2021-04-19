@@ -22,16 +22,47 @@
 }
 
 .main-form__area-name {
+  --page-indent: 20px;
+  position: relative;
   font-size: 24px;
   line-height: 26px;
   max-width: 190px;
   margin-bottom: 35px;
+  margin-left: var(--page-indent);
+
+  &::after {
+    --element-indent: 20px;
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: calc(100% + var(--element-indent));
+    width: calc(100vw - 100% - var(--page-indent) - var(--element-indent));
+    height: 2px;
+    background-color: var(--basic-green);
+  }
 
   @media (min-width: 768px) {
+    --page-indent: 70px;
+    --element-indent: 38px;
+
     font-size: 36px;
     line-height: 36px;
     max-width: fit-content;
     margin-bottom: 76px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      right: calc(100% + 40px);
+      width: calc(100vw - 100% - 40px);
+      height: 2px;
+      background-color: var(--basic-green);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    --page-indent: 110px;
   }
 }
 
@@ -66,8 +97,6 @@
 }
 
 .main-form__list-item {
-  margin-bottom: 20px;
-
   @media (min-width: 1440px) {
     min-width: 221px;
   }
@@ -101,7 +130,6 @@
   border-top: 1px solid var(--dark-grey);
   border-bottom: 1px solid var(--dark-grey);
   padding: 25px 0;
-  margin-top: 24px;
   margin-bottom: 0;
 
   @media (min-width: 768px) {
