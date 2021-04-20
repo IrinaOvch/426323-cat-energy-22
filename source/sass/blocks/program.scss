@@ -15,8 +15,6 @@
 }
 
 .program--has-icon {
-  --icon-cat: url("../../img/stack.svg#cat-slim");
-  --icon-wild-cat: url("../../img/stack.svg#cat-pro");
   --circle-radius: 25px;
 
   &::before {
@@ -48,7 +46,7 @@
 
 .program--icon-cat {
   &::before {
-    --icon: var(--icon-cat);
+    background-image: url("../../img/stack.svg#cat-slim"), radial-gradient(var(--basic-green) var(--circle-radius), transparent var(--circle-radius));
     margin-right: 20px;
 
     @media (min-width: 768px) {
@@ -63,7 +61,7 @@
 
 .program--icon-wild-cat {
   &::before {
-    --icon: var(--icon-wild-cat);
+    background-image: url("../../img/stack.svg#cat-pro"), radial-gradient(var(--basic-green) var(--circle-radius), transparent var(--circle-radius));
     margin-right: 10px;
 
     @media (min-width: 768px) {

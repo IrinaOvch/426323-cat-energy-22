@@ -59,7 +59,6 @@
     left: 0;
     top: 0;
     background-color: var((--basic-green));
-    background-image: var(--icon);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40px 40px;
@@ -77,24 +76,24 @@
 
 .about__item--icon-leaf {
   &::before {
-    --icon: url("../../img/stack.svg#icon-leaf");
+    background-image: url("../../img/stack.svg#icon-leaf");
   }
 }
 
 .about__item--icon-water {
   &::before {
-    --icon: url("../../img/stack.svg#icon-tub");
+    background-image: url("../../img/stack.svg#icon-tub");
   }
 }
 
 .about__item--icon-cutlery {
   &::before {
-    --icon: url("../../img/stack.svg#icon-eat");
+    background-image: url("../../img/stack.svg#icon-eat");
   }
 }
 
 .about__item--icon-scale {
   &::before {
-    --icon: url("../../img/stack.svg#icon-alarm");
+    background-image: url("../../img/stack.svg#icon-alarm");
   }
 }
