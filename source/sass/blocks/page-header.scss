@@ -3,6 +3,13 @@
   padding-bottom: 17px;
 
   @media (min-width: 768px) {
+    --scrollbar-width: calc(100vw - 100%);
+    --indent: 30px;
+
+    padding-left: var(--indent);
+    padding-right: calc(var(--indent) - var(--scrollbar-width));
+    margin-left: auto;
+    margin-right: auto;
     justify-content: space-between;
     display: flex;
     padding-top: 25px;
@@ -10,6 +17,8 @@
   }
 
   @media (min-width: 1440px) {
+    --indent: 110px;
+
     padding-top: 55px;
   }
 }

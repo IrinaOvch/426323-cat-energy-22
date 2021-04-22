@@ -7,13 +7,30 @@
   box-sizing: border-box;
   // background-repeat: no-repeat;
 
+  &::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-image: url("../../img/stack.svg#icon-gift");
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      margin: 0 0 0 79px;
+    }
+  }
+
   @media (min-width: 768px) {
     height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 138px;
   }
 
   @media (min-width: 1440px) {
     height: 289px;
     width: 100%;
+    display: block;
   }
 }
 
@@ -28,5 +45,11 @@
 
   @media (min-width: 768px) {
     text-align: left;
+    margin: 15px 0 0;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 48px auto 0;
+    text-align: center;
   }
 }

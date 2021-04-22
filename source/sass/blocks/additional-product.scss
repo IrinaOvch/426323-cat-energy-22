@@ -4,6 +4,10 @@
   &:last-child {
     border-bottom: 1px solid var(--special-grey);
     margin-bottom: 39px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 70px;
+    }
   }
 
   @media (min-width: 768px) {
@@ -53,6 +57,10 @@
     margin-top: 30px;
     justify-content: flex-end;
   }
+
+  @media (min-width: 1440px) {
+    justify-content: space-between;
+  }
 }
 
 .additional-product__button {
@@ -61,8 +69,8 @@
 
   @media (min-width: 768px) {
     grid-column: 1 / -1;
-    margin-top: 26px;
-    margin-bottom: 28px;
+    margin-top: 21px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: 1440px) {
