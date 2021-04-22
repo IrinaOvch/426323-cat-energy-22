@@ -38,11 +38,19 @@
 }
 
 .main-navigation__item {
+  --scrollbar-width: calc(100vw - 100%);
+  --indent: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: var(--indent);
+  padding-right: calc(var(--indent) - var(--scrollbar-width));
   border-top: 1px solid hsl(0deg, 0%, 90%);
 
   @media (min-width: 768px) {
     margin-right: 35px;
     border-top: none;
+    padding: 0;
   }
 
   &:last-child {

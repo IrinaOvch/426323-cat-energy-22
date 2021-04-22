@@ -14,30 +14,25 @@
   height: 24px;
 
   @media (min-width: 768px) {
-    margin: 0;
-  }
-}
-
-.page-footer__social-links {
-  & :last-child .social__link {
-    margin-right: 0;
-  }
-
-  @media (min-width: 768px) {
-    margin: 0;
+    margin: 6px 0 0;
   }
 }
 
 .page-footer__copyright {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Arial", "Helvetica", sans-serif;
   display: flex;
   justify-content: space-between;
   color: var(--special-dark-grey);
   text-decoration: none;
   align-items: center;
   width: 100%;
+  margin-top: 20px;
 
   @media (min-width: 768px) {
     width: fit-content;
+    margin-top: 4px;
   }
 }
 
