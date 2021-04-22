@@ -4,7 +4,7 @@
   background-color: var(--basic-grey);
 
   @media (min-width: 768px) {
-    padding-top: 66px;
+    padding-top: 64px;
     padding-bottom: 54px;
   }
 
@@ -21,6 +21,7 @@
 }
 
 .contacts__text {
+  text-transform: uppercase;
   max-width: 140px;
   font-size: 16px;
   line-height: 18px;
@@ -28,7 +29,7 @@
 
   @media (min-width: 768px) {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
     max-width: 171px;
   }
 }
@@ -40,6 +41,7 @@
 
   @media (min-width: 768px) {
     max-width: 160px;
+    text-align: right;
   }
 }
 
@@ -55,6 +57,6 @@
   justify-content: space-between;
 
   @media (min-width: 768px) {
-    padding: 0 71px;
+    padding: 0 52px;
   }
 }
