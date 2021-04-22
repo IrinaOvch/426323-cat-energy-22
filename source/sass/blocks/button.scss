@@ -12,4 +12,13 @@
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+
+  &:hover {
+    background-color: var(--green-hover);
+  }
+
+  &:active {
+    background-color: var(--green-hover);
+    color: var(--basic-white-opacity-30);
+  }
 }
