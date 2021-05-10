@@ -1,13 +1,31 @@
 .programs__list {
   padding: 0;
+  margin: 0;
   list-style: none;
 
   @media (min-width: 1440px) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
 }
 
 .programs__program {
   margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 31px;
+
+    &:first-child {
+      margin-top: 11px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    margin: 0;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
 }

@@ -4,15 +4,17 @@
   background-color: var(--basic-grey);
 
   @media (min-width: 768px) {
-    padding-top: 64px;
+    padding-top: 67px;
     padding-bottom: 54px;
   }
 
   @media (min-width: 1440px) {
-    max-width: 570px;
+    width: 570px;
     position: absolute;
+    box-sizing: border-box;
     top: 95px;
     left: 110px;
+    padding-right: 33px;
   }
 }
 
@@ -21,15 +23,16 @@
 }
 
 .contacts__text {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   max-width: 140px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
   margin: 0;
 
   @media (min-width: 768px) {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 24px;
     max-width: 171px;
   }
 }
@@ -42,6 +45,11 @@
   @media (min-width: 768px) {
     max-width: 160px;
     text-align: right;
+    margin-top: -4px;
+  }
+
+  @media (min-width: 1440px) {
+    text-align: left;
   }
 }
 
@@ -57,6 +65,6 @@
   justify-content: space-between;
 
   @media (min-width: 768px) {
-    padding: 0 52px;
+    padding: 0 51px;
   }
 }

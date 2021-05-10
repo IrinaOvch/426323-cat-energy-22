@@ -1,6 +1,8 @@
 .page-header {
   padding-top: 11px;
-  padding-bottom: 17px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
   @media (min-width: 768px) {
     --scrollbar-width: calc(100vw - 100%);
@@ -12,19 +14,11 @@
     margin-right: auto;
     justify-content: space-between;
     display: flex;
-    padding-top: 25px;
-    padding-bottom: 0;
+    padding-top: 21px;
   }
 
   @media (min-width: 1440px) {
-    --indent: 110px;
-
-    padding-top: 55px;
-  }
-}
-
-.page-header__logo {
-  & :first-child {
-    margin-right: 55px;
+    padding-top: 54px;
+    padding-left: 102px;
   }
 }

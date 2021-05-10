@@ -7,7 +7,8 @@
   &::before {
     content: " ";
     display: block;
-    background-image: url("../../img/promo-background.jpg");
+    background-image: linear-gradient(var(--basic-green-opacity), var(--basic-green-opacity)),
+      url("../../img/promo-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -18,21 +19,17 @@
     z-index: -3;
   }
 
-  &::after {
-    content: " ";
-    display: block;
-    background-color: var(--basic-green);
-    opacity: 85%;
-    width: 100%;
-    height: 302px;
-    position: absolute;
-    top: 0;
-    z-index: -2;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    &::before {
+      background-image: linear-gradient(var(--basic-green-opacity), var(--basic-green-opacity)),
+        url("../../img/promo-background@2x.jpg");
+    }
   }
 
   @media (min-width: 768px) {
     color: var(--basic-black);
-    padding-left: 117px;
+    padding-left: 87px;
+    padding-top: 50px;
     min-height: 800px;
 
     &::before {
@@ -46,10 +43,13 @@
 
   @media (min-width: 1440px) {
     position: static;
-    min-height: 600px;
+    min-height: 553px;
+    padding-top: 98px;
+    padding-left: 80px;
 
     &::before {
-      background-image: url("../../img/promo-background-desctop.jpg");
+      background-image: linear-gradient(var(--basic-green-opacity), var(--basic-green-opacity)),
+        url("../../img/promo-background-desctop@1x.jpg");
       display: block;
       width: 50%;
       height: 694px;
@@ -61,6 +61,13 @@
       width: 50%;
       height: 694px;
       right: 0;
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      &::before {
+        background-image: linear-gradient(var(--basic-green-opacity), var(--basic-green-opacity)),
+          url("../../img/promo-background-desctop@2x.jpg");
+      }
     }
   }
 }
@@ -84,6 +91,7 @@
   line-height: 14px;
   margin-top: 25px;
   margin-bottom: 0;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -98,17 +106,20 @@
 
   @media (min-width: 768px) {
     position: absolute;
-    bottom: 0;
+    bottom: -11px;
     left: 50%;
     transform: translateX(-50%);
-    height: 709px;
-    width: 609px;
+    height: 608px;
+    width: 620px;
     z-index: -1;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @media (min-width: 1440px) {
-    top: 0;
+    top: 112px;
+    width: 503px;
+    height: 498px;
+    transform: translateX(-27%);
   }
 }
 
@@ -118,7 +129,15 @@
   line-height: 18px;
 
   @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px;
+    margin-left: -5px;
     max-width: 244px;
     margin-top: 49px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 0;
   }
 }

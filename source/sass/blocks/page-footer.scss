@@ -8,20 +8,31 @@
 }
 
 .page-footer__logo {
-  margin: 0 auto 32px;
+  margin: 0 auto 31px;
   display: block;
   width: 128px;
   height: 24px;
 
   @media (min-width: 768px) {
-    margin: 6px 0 0;
+    margin: 0;
+    margin-top: 7px;
+  }
+}
+
+.page-footer__social-links {
+  & :last-child .social__link {
+    margin-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
   }
 }
 
 .page-footer__copyright {
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 18px;
-  font-family: "Arial", "Helvetica", sans-serif;
   display: flex;
   justify-content: space-between;
   color: var(--special-dark-grey);
@@ -32,7 +43,7 @@
 
   @media (min-width: 768px) {
     width: fit-content;
-    margin-top: 4px;
+    align-self: baseline;
   }
 }
 

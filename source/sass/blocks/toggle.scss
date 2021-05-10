@@ -33,7 +33,7 @@
 .toggle__scale {
   margin: 0 12px;
   width: 84px;
-  height: 14px;
+  height: 12px;
   background-color: var(--basic-white);
   border-radius: 6px;
   border: 1px solid var(--basic-dark-grey);
@@ -48,11 +48,11 @@
 
 .toggle__scale-toggle {
   width: 35px;
-  height: 6px;
+  height: 5px;
   border-radius: 6px;
   background-color: var(--basic-green);
   position: absolute;
-  top: 4px;
+  top: 3px;
 
   @media (min-width: 768px) {
     width: 32px;
