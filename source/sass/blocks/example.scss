@@ -173,6 +173,12 @@
   }
 }
 
+.example__app-wrapper {
+  @media (min-width: 768px) {
+    width: fit-content;
+  }
+}
+
 .example__images-wrapper {
   display: flex;
   justify-content: center;
