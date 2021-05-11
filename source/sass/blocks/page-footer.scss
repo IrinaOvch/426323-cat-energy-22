@@ -8,14 +8,15 @@
 }
 
 .page-footer__logo {
-  margin: 0 auto 31px;
+  margin: 0 auto 29px;
   display: block;
   width: 128px;
   height: 24px;
 
   @media (min-width: 768px) {
     margin: 0;
-    margin-top: 7px;
+    margin-top: 8px;
+    align-self: flex-start;
   }
 }
 
@@ -44,6 +45,7 @@
   @media (min-width: 768px) {
     width: fit-content;
     align-self: baseline;
+    margin-top: 0;
   }
 }
 
