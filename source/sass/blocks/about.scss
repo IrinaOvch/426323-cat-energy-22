@@ -3,7 +3,7 @@
   margin-bottom: 0;
 
   @media (min-width: 768px) {
-    margin-top: 45px;
+    margin-top: 40px;
   }
 
   @media (min-width: 1440px) {
@@ -36,7 +36,7 @@
   position: relative;
   min-height: 60px;
   padding-left: 80px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   counter-increment: number;
 
   @media (min-width: 768px) {
@@ -70,11 +70,11 @@
     height: 60px;
     position: absolute;
     left: 0;
-    top: -3px;
+    top: 0;
     background-color: var((--basic-green));
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 40px 40px;
+    background-size: 30px 30px;
 
     @media (min-width: 768px) {
       width: 80px;
