@@ -4,6 +4,7 @@
 
 .page__body {
   margin: 0 auto;
+  background-color: var(--basic-white);
 }
 
 .page__leveler {
@@ -12,7 +13,8 @@
 
   padding-left: var(--indent);
   padding-right: calc(var(--indent) - var(--scrollbar-width));
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: 768px) {
     --indent: 30px;

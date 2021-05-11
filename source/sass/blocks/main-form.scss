@@ -1,8 +1,8 @@
 .main-form {
-  margin-top: 39px;
+  margin-top: 38px;
 
   @media (min-width: 768px) {
-    margin-top: 66px;
+    margin-top: 65px;
   }
 }
 
@@ -10,10 +10,14 @@
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @media (min-width: 768px) {
-    margin-bottom: 72px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 69px;
   }
 
   &:last-child {
@@ -22,16 +26,16 @@
 }
 
 .main-form__area-name {
-  --page-indent: 20px;
+  --page-indent: 18px;
+  --element-indent: 20px;
   position: relative;
   font-size: 24px;
   line-height: 26px;
   max-width: 190px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   margin-left: var(--page-indent);
 
   &::after {
-    --element-indent: 20px;
     content: "";
     position: absolute;
     top: 17px;
@@ -39,10 +43,14 @@
     width: calc(100vw - 100% - var(--page-indent) - var(--element-indent));
     height: 2px;
     background-color: var(--basic-green);
+
+    @media (min-width: 768px) {
+      top: 21px;
+    }
   }
 
   @media (min-width: 768px) {
-    --page-indent: 70px;
+    --page-indent: 67px;
     --element-indent: 38px;
 
     font-size: 36px;
@@ -53,9 +61,9 @@
     &::before {
       content: "";
       position: absolute;
-      top: 17px;
-      right: calc(100% + 40px);
-      width: calc(100vw - 100% - 40px);
+      top: 21px;
+      right: calc(100% + 37px);
+      width: calc(100vw - 100% - 37px);
       height: 2px;
       background-color: var(--basic-green);
     }
@@ -78,8 +86,14 @@
     margin-bottom: 20px;
   }
 
-  &:last-of-type {
+  &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.main-form__area:nth-child(2) .main-form__line {
+  @media (min-width: 1440px) {
+    margin: 0;
   }
 }
 
@@ -97,10 +111,14 @@
 }
 
 .main-form__list-item {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 23px;
+  }
 
   @media (min-width: 1440px) {
-    min-width: 221px;
+    min-width: 245px;
   }
 
   &:last-child {
@@ -112,16 +130,20 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 41px;
+  margin-bottom: 35px;
 
   @media (min-width: 768px) {
     display: grid;
     min-width: 100%;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 54px;
+    column-gap: 55px;
+    row-gap: 19px;
+    margin-bottom: 36px;
+    margin-top: -14px;
   }
 
   @media (min-width: 1440px) {
+    margin-bottom: 43px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -131,31 +153,36 @@
 .main-form__list--with-border {
   border-top: 1px solid var(--dark-grey);
   border-bottom: 1px solid var(--dark-grey);
-  padding: 25px 0;
+  padding: 25px 20px 21px;
   margin-bottom: 0;
+  margin-top: 23px;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    margin-top: 72px;
-    padding: 30px 0;
+    padding: 29px 66px 29px 29px;
+    margin: 72px auto 15px;
     border: 1px solid var(--dark-grey);
-    padding-left: 28px;
     display: block;
+    min-width: fit-content;
+    max-width: 630px;
   }
 
   @media (min-width: 1440px) {
     margin: 0;
     display: block;
+    max-width: 100%;
   }
 }
 
 .main-form__button {
-  font-size: 16px;
-  line-height: 20px;
-
   @media (min-width: 768px) {
     max-width: 282px;
-    box-sizing: border-box;
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 568px;
   }
 }
 
@@ -168,7 +195,14 @@
   margin-top: 21px;
 
   @media (min-width: 768px) {
-    margin-left: 61px;
+    margin-left: 63px;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 82px;
+    margin-top: 18px;
   }
 }
 
@@ -184,5 +218,45 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    padding: 0 110px;
   }
+}
+
+.main-form__leveler {
+  --scrollbar-width: calc(100vw - 100%);
+  --indent: 20px;
+
+  padding-left: var(--indent);
+  padding-right: calc(var(--indent) - var(--scrollbar-width));
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    padding-left: 70px;
+    padding-right: 66px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 110px;
+    margin: 0;
+  }
+}
+
+.main-form__lines {
+  padding-left: 20px;
+  padding-right: calc(20px - calc(100vw - 100%));
+
+  @media (min-width: 768px) {
+    padding-left: 70px;
+    padding-right: 66px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.main-form__lines-wrapper {
+  display: grid;
 }
