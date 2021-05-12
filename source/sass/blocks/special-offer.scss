@@ -1,11 +1,12 @@
 .special-offer {
   width: 100%;
   height: 289px;
-  background-image: url("../../img/gift-background.png");
+  background-image: url("../../img/gift-background-mobile@1x.png");
   padding-top: 58px;
   padding-bottom: 43px;
   box-sizing: border-box;
-  // background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   &::before {
     content: "";
@@ -20,17 +21,33 @@
     }
   }
 
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../../img/gift-background-mobile@2x.png");
+  }
+
   @media (min-width: 768px) {
+    background-size: cover;
     height: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 138px;
+    background-image: url("../../img/gift-background-tablet@1x.png");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/gift-background-tablet@2x.png");
+    }
   }
 
   @media (min-width: 1440px) {
+    background-size: contain;
     height: 289px;
     width: 100%;
     display: block;
+    background-image: url("../../img/gift-background-desktop@1x.png");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/gift-background-desktop@2x.png");
+    }
   }
 }
 
