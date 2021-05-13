@@ -41,14 +41,41 @@
   align-items: center;
   width: 100%;
   margin-top: 20px;
+  transition: 0.5s;
 
   @media (min-width: 768px) {
     width: fit-content;
     align-self: baseline;
     margin-top: 0;
   }
-}
 
-.page-footer__copyright-logo {
-  margin-left: 22px;
+  &::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 34px;
+    mask-image: url("../../img/stack.svg#html-academy");
+    background-color: var(--special-grey-icons);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    transition: 0.5s;
+
+    @media (min-width: 768px) {
+      margin-left: 18px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-color: var(--basic-green);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      background-color: var(--basic-green);
+    }
+  }
 }

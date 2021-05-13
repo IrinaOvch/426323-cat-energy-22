@@ -1,4 +1,5 @@
 .page-header {
+  max-width: 1440px;
   padding-top: 11px;
   position: relative;
   display: grid;
@@ -8,6 +9,8 @@
     --scrollbar-width: calc(100vw - 100%);
     --indent: 30px;
 
+    width: 100%;
+    box-sizing: border-box;
     padding-left: var(--indent);
     padding-right: calc(var(--indent) - var(--scrollbar-width));
     margin-left: auto;
