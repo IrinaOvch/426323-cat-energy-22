@@ -1,15 +1,21 @@
 .social {
   background-color: var(--basic-grey);
-  padding-top: 34px;
+  padding-top: 40px;
   padding-bottom: 22px;
 
   @media (min-width: 768px) {
-    padding-top: 52px;
+    padding-top: 58px;
     padding-bottom: 66px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 55px;
   }
 }
 
 .social__wrapper {
+  max-width: 1440px;
+
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -51,6 +57,7 @@
     mask-size: cover;
     mask-position: center;
     display: block;
+    transition: 0.5;
   }
 
   @media (min-width: 768px) {
@@ -58,6 +65,20 @@
 
     &::before {
       height: 23px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      background-color: var(--basic-green);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      background-color: var(--basic-green);
     }
   }
 }

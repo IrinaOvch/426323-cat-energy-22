@@ -140,6 +140,7 @@
   position: relative;
   width: fit-content;
   text-transform: uppercase;
+  transition: 0.5s;
 
   &::after {
     content: "";
@@ -149,10 +150,24 @@
     mask-image: url("../../img/stack.svg#icon-arrow");
     mask-repeat: no-repeat;
     mask-size: cover;
-    mask-position: center;
+    mask-position: -8px 50%;
     position: absolute;
     top: -1px;
-    right: -48px;
+    right: -49px;
+  }
+
+  &:hover {
+    &::after {
+      mask-position: 0 50%;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      mask-position: 0 50%;
+    }
   }
 
   @media (min-width: 768px) {

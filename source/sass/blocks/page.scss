@@ -1,10 +1,14 @@
 .page {
   font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+  height: 100%;
 }
 
 .page__body {
+  height: 100%;
   margin: 0 auto;
   background-color: var(--basic-white);
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .page__leveler {

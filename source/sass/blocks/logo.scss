@@ -1,5 +1,14 @@
 .logo {
   text-decoration: none;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo--img {
@@ -29,24 +38,23 @@
 
 .logo--text {
   width: fit-content;
+  margin-top: 12px;
   justify-self: center;
 
   @media (min-width: 768px) {
     margin-right: auto;
+    margin-top: 22px;
   }
 }
 
 .logo__text {
-  object-fit: cover;
-  height: 100%;
-
   @media (min-width: 768px) {
     width: 100px;
-    object-fit: contain;
   }
 
   @media (min-width: 1440px) {
-    width: 118px;
+    width: 117px;
+    height: 21px;
     margin-top: -4px;
   }
 }
