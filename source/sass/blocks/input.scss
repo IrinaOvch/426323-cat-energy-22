@@ -8,6 +8,11 @@
   }
 }
 
+.input[type="radio"]:disabled + .main-form__label,
+.input[type="checkbox"]:disabled + .main-form__label {
+  opacity: 0.3;
+}
+
 .input[type="radio"] + .main-form__label::before,
 .input[type="checkbox"] + .main-form__label::before {
   content: "";
@@ -64,28 +69,61 @@
   }
 }
 
-.input[type="email"],
-.input[type="tel"] {
-  background-repeat: no-repeat;
-  background-position: 95% center;
+.input[type="email"] + .main-form__label,
+.input[type="tel"] + .main-form__label {
+  order: -1;
 
-  @media (min-width: 768px) {
-    background-position: 98% center;
-  }
-
-  @media (min-width: 1440px) {
-    background-position: 97% center;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--super-dark-grey);
+    top: 14px;
   }
 }
 
-.input[type="email"] {
-  background-image: url("../../img/stack.svg#icon-email");
-  background-size: 30px 19px;
+.input[type="email"] + .main-form__label {
+  &::after {
+    mask-image: url("../../img/stack.svg#icon-email");
+    right: 15px;
+
+    @media (min-width: 768px) {
+      right: 17px;
+      top: 14px;
+    }
+
+    @media (min-width: 1440px) {
+      right: 18px;
+      top: 16px;
+    }
+  }
 }
 
-.input[type="tel"] {
-  background-image: url("../../img/stack.svg#icon-phone");
-  background-size: 26px 21px;
+.input[type="tel"] + .main-form__label {
+  &::after {
+    mask-image: url("../../img/stack.svg#icon-phone");
+    right: 13px;
+
+    @media (min-width: 768px) {
+      right: 17px;
+      top: 15px;
+    }
+  }
+}
+
+.input[type="email"]:focus + .main-form__label,
+.input[type="tel"]:focus + .main-form__label {
+  &::after {
+    background-color: var(--basic-green);
+  }
+}
+
+.input[type="email"]:invalid + .main-form__label,
+.input[type="tel"]:invalid + .main-form__label {
+  &::after {
+    background-color: var(--status-error);
+  }
 }
 
 .input {
@@ -99,6 +137,7 @@
   text-transform: uppercase;
   font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   box-sizing: border-box;
+  transition: 0.2s;
 
   &::placeholder {
     color: inherit;
@@ -110,6 +149,20 @@
     line-height: 30px;
     padding: 10px 18px;
     margin-left: 18px;
+  }
+
+  &:hover {
+    border: 1px solid var(--special-dark-grey);
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid var(--basic-black);
+    outline: none;
+  }
+
+  &:invalid {
+    border: 1px solid var(--status-error);
   }
 }
 

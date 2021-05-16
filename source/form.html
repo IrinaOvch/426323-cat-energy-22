@@ -38,14 +38,14 @@
 
   <main>
     <section class="program-selection">
-      <div class="main-form__leveler">
+      <div class="main-form__leveler program-selection__leveler">
         <h1 class="program-selection__section-title section-title">Подбор программы</h1>
         <p class="program-selection__description">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота
         </p>
       </div>
       <form action="https://echo.htmlacademy.ru" method="POST" class="main-form">
         <fieldset class="main-form__area">
-          <div class="main-form__aria-wrapper">
+          <div class="main-form__aria-wrapper program-selection__leveler">
             <div class="main-form__lines">
               <div class="main-form__line">
                 <label class="main-form__label" for="cat-name">Имя:*</label>
@@ -83,29 +83,29 @@
         </fieldset>
         <fieldset class="main-form__area">
           <legend class="main-form__area-name">Контактные данные (владельца кота)</legend>
-          <div class="main-form__aria-wrapper main-form__leveler">
+          <div class="main-form__aria-wrapper main-form__leveler program-selection__leveler">
             <div class="main-form__line">
-              <label class="main-form__label" for="owner-email">E-mail:*</label>
               <input class="main-form__input input" type="email" name="owner-email" id="owner-email"
                 placeholder="kuklachev@gmail.com" required>
+              <label class="main-form__label" for="owner-email">E-mail:*</label>
             </div>
             <div class="main-form__line">
-              <label class="main-form__label" for="owner-phone-number">Телефон:*</label>
               <input class="main-form__input input" type="tel" name="owner-phone-number" id="owner-phone-number"
                 placeholder="8 (960) 900-60-90" required>
+              <label class="main-form__label" for="owner-phone-number">Телефон:*</label>
             </div>
           </div>
         </fieldset>
         <fieldset class="main-form__area">
           <legend class="main-form__area-name">Комментарий</legend>
-          <div class="main-form__leveler">
+          <div class="main-form__leveler program-selection__leveler">
             <textarea class="main-form__input input input--type_textarea"
               placeholder="Расскажите обо всех повАдках кота" name="owner-comment"></textarea>
           </div>
         </fieldset>
         <fieldset class="main-form__area">
           <legend class="main-form__area-name">Дополнительно</legend>
-          <div class="main-form__leveler main-form__wrapper">
+          <div class="main-form__leveler main-form__wrapper program-selection__leveler">
             <ul class="main-form__list">
               <li class="main-form__list-item">
                 <input id="sweetener" type="checkbox" name="sweetener" class="main-form__input input visually-hidden"
@@ -166,9 +166,7 @@
             </a>
           </li>
         </ul>
-        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy<img
-            class="page-footer__copyright-logo" width="27" height="34" src="img/html-academy.svg"
-            alt="логотип HTML Academy"></a>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </div>
   </footer>
