@@ -62,7 +62,11 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src([
+    "source/img/**/*.{png,jpg,svg}",
+    "!source/img/icons/**/*.svg",
+    "!source/img/identity.svg"
+  ])
   .pipe(imagemin([
     imagemin.mozjpeg({progressive: true}),
     imagemin.optipng({optimizationLevel: 3}),
@@ -74,7 +78,10 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src([
+    "source/img/**/*.{png,jpg,svg}",
+    "!source/img/identity.svg"
+  ])
   .pipe(gulp.dest("build/img"))
 }
 
@@ -83,7 +90,10 @@ exports.images = copyImages;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src([
+    "source/img/**/*.{png,jpg}",
+    "!source/img/favicon/**/*.png"
+  ])
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("build/img"))
 }
@@ -101,7 +111,7 @@ const svgstack = () => {
       }
     }))
     .pipe(rename("stack.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.svgstack = svgstack;
@@ -113,7 +123,9 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/img/**/*.svg",
-    "!source/img/icons/*.svg",
+    "source/manifest.webmanifest",
+    "source/img/identity.svg",
+    "!source/img/icons/**/*.svg",
   ], {
     base: "source"
   })
@@ -141,7 +153,7 @@ const reload = (done) => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -156,7 +168,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/img/icons/**/*.svg", gulp.series(svgstack));
+  gulp.watch("source/img/icons/**/*.svg", gulp.series(svgstack, reload));
   gulp.watch("source/js/script.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
