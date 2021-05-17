@@ -80,7 +80,8 @@ exports.images = optimizeImages;
 const copyImages = () => {
   return gulp.src([
     "source/img/**/*.{png,jpg,svg}",
-    "!source/img/identity.svg"
+    "!source/img/identity.svg",
+    "!source/img/icons/**/*.svg"
   ])
   .pipe(gulp.dest("build/img"))
 }
@@ -125,7 +126,7 @@ const copy = (done) => {
     "source/img/**/*.svg",
     "source/manifest.webmanifest",
     "source/img/identity.svg",
-    "!source/img/icons/**/*.svg",
+    "!source/img/icons/**/*.svg"
   ], {
     base: "source"
   })
