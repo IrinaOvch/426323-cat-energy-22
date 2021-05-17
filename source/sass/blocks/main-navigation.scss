@@ -42,7 +42,7 @@
   height: 24px;
   border: none;
   background-color: transparent;
-  background-image: url("../../img/burger-button.svg");
+  background-image: url("../../img/stack.svg#burger-button");
   background-repeat: no-repeat;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .main-navigation__toggle--opened {
-  background-image: url("../../img/button-close.svg");
+  background-image: url("../../img/stack.svg#button-close");
   width: 18px;
   height: 18px;
   background-size: contain;
