@@ -23,4 +23,8 @@
     background-color: var(--green-hover);
     color: var(--basic-white-opacity-30);
   }
+
+  &:focus {
+    outline: 2px solid var(--dark-green);
+  }
 }
