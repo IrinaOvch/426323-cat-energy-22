@@ -9,6 +9,7 @@
   &::before {
     content: " ";
     display: block;
+    background-color: var(--basic-green-opacity);
     background-image: linear-gradient(var(--basic-green-opacity), var(--basic-green-opacity)),
       url("../../img/promo-background.jpg");
     background-repeat: no-repeat;
