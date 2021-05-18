@@ -31,6 +31,16 @@
   }
 }
 
+.input[type="radio"]:focus-visible + .main-form__label::before,
+.input[type="checkbox"]:focus-visible + .main-form__label::before {
+  outline: 1px solid var(--basic-green);
+}
+
+.input[type="radio"]:focus + .main-form__label::before,
+.input[type="checkbox"]:focus + .main-form__label::before {
+  outline: 1px solid var(--basic-green);
+}
+
 .input:checked + .main-form__label::after {
   content: "";
   position: absolute;
@@ -119,8 +129,9 @@
   }
 }
 
-.input[type="email"]:required:invalid + .main-form__label,
-.input[type="tel"]:required:invalid + .main-form__label {
+.input--state_error {
+  border: 1px solid var(--status-error);
+
   &::after {
     background-color: var(--status-error);
   }
@@ -159,10 +170,6 @@
   &:active {
     border: 1px solid var(--basic-black);
     outline: none;
-  }
-
-  &:required:invalid {
-    border: 1px solid var(--status-error);
   }
 }
 
