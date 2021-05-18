@@ -1,21 +1,33 @@
 .example {
   position: relative;
-  background-color: var(--special-grey);
+  background-color: var(--basic-grey);
   padding-top: 27px;
   padding-bottom: 34px;
+  z-index: 1;
 
   @media (min-width: 768px) {
     background-color: var(--basic-white);
     border-top: 1px solid var(--medium-grey);
     padding-top: 43px;
     padding-bottom: 69px;
-    background-image: linear-gradient(transparent 621px, var(--special-grey) 621px);
+    background-image: linear-gradient(transparent 621px, var(--basic-grey) 621px);
   }
 
   @media (min-width: 1440px) {
     border: none;
     padding-top: 26px;
-    background-image: linear-gradient(transparent 162px, var(--special-grey) 162px);
+    background-image: linear-gradient(transparent 162px, var(--basic-grey) 162px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 464px;
+      width: 395px;
+      background-color: var(--special-grey);
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 }
 
@@ -188,60 +200,50 @@
   margin-bottom: 18px;
 
   @media (min-width: 768px) {
-    height: 600px;
-    position: relative;
-    margin-bottom: 8px;
+    width: 610px;
+    margin-top: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -72px;
   }
 
   @media (min-width: 1440px) {
-    height: 490px;
+    margin: -60px auto -100px;
   }
 }
 
 .example__image {
+  display: block;
   object-fit: contain;
-  object-position: center;
+  object-position: -5px 0;
 
   @media (min-width: 768px) {
-    position: absolute;
-  }
-
-  @media (min-width: 1440px) {
-    height: 536px;
-    width: 730px;
+    object-position: center;
+    width: 354px;
+    height: 100%;
   }
 }
 
 .example__image--before {
-  @media (min-width: 768px) {
-    height: 586px;
-    width: 676px;
-    left: 15px;
-    top: 40px;
-  }
-
   @media (min-width: 1440px) {
-    left: 1px;
-    top: -89px;
+
+    width: 405px;
+    object-position: 40px top;
   }
 }
 
 .example__image--after {
-  @media (min-width: 768px) {
-    height: 523px;
-    width: 676px;
-    top: 75px;
-    left: 41px;
-  }
-
   @media (min-width: 1440px) {
-    top: -60px;
-    left: 26px;
+    width: 327px;
   }
 }
 
 .example__image--hidden {
   display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 }
 
 .example__photo-toggle {
