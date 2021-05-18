@@ -119,8 +119,8 @@
   }
 }
 
-.input[type="email"]:invalid + .main-form__label,
-.input[type="tel"]:invalid + .main-form__label {
+.input[type="email"]:required:invalid + .main-form__label,
+.input[type="tel"]:required:invalid + .main-form__label {
   &::after {
     background-color: var(--status-error);
   }
@@ -161,7 +161,7 @@
     outline: none;
   }
 
-  &:invalid {
+  &:required:invalid {
     border: 1px solid var(--status-error);
   }
 }
