@@ -11,6 +11,8 @@
   }
 
   @media (min-width: 768px) {
+    border-left: 1px solid var(--special-grey);
+    border-right: 1px solid var(--special-grey);
     padding: 0 38px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,6 +22,8 @@
     grid-template-columns: 1fr 1fr 244px;
     column-gap: 38px;
     padding: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 
