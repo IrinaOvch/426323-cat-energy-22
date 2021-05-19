@@ -159,7 +159,8 @@
   }
 
   &:hover {
-    border: 1px solid var(--special-dark-grey);
+    border: 1px solid transparent;
+    outline: 2px solid var(--special-dark-grey);
   }
 
   &:focus,
@@ -187,7 +188,8 @@
 }
 
 .input--state_error:invalid {
-  border: 1px solid var(--status-error);
+  border: 1px solid transparent;
+  outline: 2px solid var(--status-error);
 }
 
 .input--state_error:invalid + .main-form__label {
