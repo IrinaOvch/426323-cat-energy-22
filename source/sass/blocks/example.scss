@@ -1,8 +1,8 @@
 .example {
   position: relative;
-  background-color: var(--basic-grey);
+  background-color: var(--special-grey);
   padding-top: 27px;
-  padding-bottom: 34px;
+  padding-bottom: 35px;
   z-index: 1;
 
   @media (min-width: 768px) {
@@ -10,7 +10,7 @@
     border-top: 1px solid var(--medium-grey);
     padding-top: 43px;
     padding-bottom: 69px;
-    background-image: linear-gradient(transparent 621px, var(--basic-grey) 621px);
+    background-image: linear-gradient(transparent 621px, var(--special-grey) 621px);
   }
 
   @media (min-width: 1440px) {
@@ -197,7 +197,7 @@
 .example__images-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 
   @media (min-width: 768px) {
     width: 610px;
@@ -215,7 +215,6 @@
 .example__image {
   display: block;
   object-fit: contain;
-  object-position: -5px 0;
 
   @media (min-width: 768px) {
     object-position: center;
@@ -225,8 +224,9 @@
 }
 
 .example__image--before {
-  @media (min-width: 1440px) {
+  object-position: -2px -1px;
 
+  @media (min-width: 1440px) {
     width: 405px;
     object-position: 40px top;
   }

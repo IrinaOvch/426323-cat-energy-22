@@ -36,8 +36,8 @@
 
 .main-navigation__toggle {
   position: absolute;
-  top: 22px;
-  right: 34px;
+  top: 18px;
+  right: 20px;
   width: 24px;
   height: 24px;
   border: none;
@@ -56,8 +56,10 @@
 
 .main-navigation__toggle--opened {
   background-image: url("../../img/stack.svg#button-close");
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
+  top: 21px;
+  right: 22px;
   background-size: contain;
 }
 

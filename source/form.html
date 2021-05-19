@@ -40,15 +40,15 @@
 
   <main>
     <section class="program-selection">
-      <div class="main-form__leveler program-selection__leveler">
+      <div class="program-selection__leveler">
         <h1 class="program-selection__section-title section-title">Подбор программы</h1>
         <p class="program-selection__description">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота
         </p>
       </div>
       <form action="https://echo.htmlacademy.ru" method="POST" class="main-form">
         <fieldset class="main-form__area">
-          <div class="main-form__aria-wrapper program-selection__leveler">
-            <div class="main-form__lines">
+          <div class="main-form__aria-wrapper">
+            <div class="main-form__lines program-selection__leveler">
               <div class="main-form__line">
                 <label class="main-form__label" for="cat-name">Имя:*</label>
                 <input class="main-form__input input" type="text" name="cat-name" id="cat-name" placeholder="барсик"
@@ -83,9 +83,9 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="main-form__area">
+        <fieldset class="main-form__area program-selection__leveler">
           <legend class="main-form__area-name">Контактные данные (владельца кота)</legend>
-          <div class="main-form__aria-wrapper main-form__leveler program-selection__leveler">
+          <div class="main-form__aria-wrapper">
             <div class="main-form__line">
               <input class="main-form__input input" type="email" name="owner-email" id="owner-email"
                 placeholder="kuklachev@gmail.com" required>
@@ -98,16 +98,14 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="main-form__area">
+        <fieldset class="main-form__area program-selection__leveler">
           <legend class="main-form__area-name">Комментарий</legend>
-          <div class="main-form__leveler program-selection__leveler">
-            <textarea class="main-form__input input input--type_textarea"
-              placeholder="Расскажите обо всех повАдках кота" name="owner-comment"></textarea>
-          </div>
+          <textarea class="main-form__input input input--type_textarea" placeholder="Расскажите обо всех повАдках кота"
+            name="owner-comment"></textarea>
         </fieldset>
-        <fieldset class="main-form__area">
+        <fieldset class="main-form__area program-selection__leveler ">
           <legend class="main-form__area-name">Дополнительно</legend>
-          <div class="main-form__leveler main-form__wrapper program-selection__leveler">
+          <div class="main-form__wrapper ">
             <ul class="main-form__list">
               <li class="main-form__list-item">
                 <input id="sweetener" type="checkbox" name="sweetener" class="main-form__input input visually-hidden"

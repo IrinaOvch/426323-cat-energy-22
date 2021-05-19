@@ -8,16 +8,24 @@
 
 .main-form__area {
   border: none;
-  padding: 0;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 
   @media (min-width: 768px) {
-    margin-bottom: 62px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: 1440px) {
-    margin-bottom: 69px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:first-child {
+    padding: 0;
+
+    @media (min-width: 1440px) {
+      margin-bottom: 71px;
+    }
   }
 
   &:last-child {
@@ -26,28 +34,39 @@
 }
 
 .main-form__area-name {
+  background-color: var(--basic-white);
   --page-indent: 18px;
   --element-indent: 20px;
   position: relative;
   font-size: 24px;
   line-height: 26px;
-  max-width: 190px;
-  margin-bottom: 36px;
-  margin-left: var(--page-indent);
+  max-width: 181px;
+  margin-bottom: 30px;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
-    top: 17px;
-    left: calc(100% + var(--element-indent));
-    width: calc(100vw - 100% - var(--page-indent) - var(--element-indent));
+    top: 16px;
+    right: calc(100% + 21px);
+    width: calc(100vw - 100% - 21px);
     height: 2px;
     background-color: var(--basic-green);
+    box-shadow: calc(100vw + 21px) 0 0 0 var(--basic-green);
 
     @media (min-width: 768px) {
-      top: 21px;
+      top: 22px;
+      right: calc(100% + 38px);
+      width: calc(100vw - 100% - 38px);
+      box-shadow: calc(100vw + 38px) 0 0 0 var(--basic-green);
+    }
+
+    @media (min-width: 1440px) {
+      right: calc(100% + 35px);
+      width: calc(100vw - 100% - 35px);
+      box-shadow: calc(100vw + 35px) 0 0 0 var(--basic-green);
     }
   }
+
 
   @media (min-width: 768px) {
     --page-indent: 67px;
@@ -56,17 +75,7 @@
     font-size: 36px;
     line-height: 36px;
     max-width: fit-content;
-    margin-bottom: 76px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 21px;
-      right: calc(100% + 37px);
-      width: calc(100vw - 100% - 37px);
-      height: 2px;
-      background-color: var(--basic-green);
-    }
+    margin-bottom: 68px;
   }
 
   @media (min-width: 1440px) {
@@ -99,6 +108,7 @@
 }
 
 .main-form__label {
+  display: block;
   color: var(--special-dark-grey);
   font-size: 16px;
   line-height: 18px;
@@ -112,14 +122,14 @@
 }
 
 .main-form__list-item {
-  margin-bottom: 19px;
+  margin-bottom: 26px;
 
   @media (min-width: 768px) {
     margin-bottom: 23px;
   }
 
   @media (min-width: 1440px) {
-    min-width: 270px;
+    min-width: 221px;
   }
 
   &:last-child {
@@ -131,7 +141,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
 
   @media (min-width: 768px) {
     display: grid;
@@ -144,7 +154,9 @@
   }
 
   @media (min-width: 1440px) {
+    margin-top: -11px;
     margin-bottom: 43px;
+    column-gap: 78px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -152,8 +164,8 @@
 .main-form__list--with-border {
   border-top: 1px solid var(--dark-grey);
   border-bottom: 1px solid var(--dark-grey);
-  padding: 25px 20px 21px;
-  margin-bottom: 0;
+  padding: 25px 0 24px;
+  margin-bottom: 8px;
   margin-top: 23px;
   box-sizing: border-box;
 
@@ -170,6 +182,14 @@
     margin: 0;
     display: block;
     max-width: 100%;
+  }
+}
+
+.main-form__list--with-border .main-form__list-item {
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 0;
   }
 }
 
@@ -217,41 +237,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    padding: 0 110px;
-  }
-}
-
-.main-form__leveler {
-  --scrollbar-width: calc(100vw - 100%);
-  --indent: 20px;
-
-  padding-left: var(--indent);
-  padding-right: calc(var(--indent) - var(--scrollbar-width));
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: 768px) {
-    padding-left: 70px;
-    padding-right: 66px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0 110px;
-    margin: 0;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
   }
 }
 
 .main-form__lines {
-  padding-left: 20px;
-  padding-right: calc(20px - calc(100vw - 100%));
-
-  @media (min-width: 768px) {
-    padding-left: 70px;
-    padding-right: 66px;
-  }
-
   @media (min-width: 1440px) {
-    padding: 0;
     margin: 0;
   }
 }

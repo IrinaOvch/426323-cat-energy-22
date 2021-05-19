@@ -11,6 +11,13 @@
   grid-template-rows: min-content 1fr min-content;
 }
 
+.page__wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
 .page__leveler {
   --scrollbar-width: calc(100vw - 100%);
   --indent: 20px;

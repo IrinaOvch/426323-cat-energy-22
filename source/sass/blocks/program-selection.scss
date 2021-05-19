@@ -1,15 +1,15 @@
 .program-selection {
   padding-top: 27px;
-  padding-bottom: 32px;
+  padding-bottom: 22px;
 
   @media (min-width: 768px) {
     padding-top: 53px;
-    padding-bottom: 71px;
+    padding-bottom: 63px;
   }
 
   @media (min-width: 1440px) {
     padding-top: 62px;
-    padding-bottom: 82px;
+    padding-bottom: 72px;
   }
 }
 
@@ -38,7 +38,24 @@
 }
 
 .program-selection__leveler {
-  max-width: 1440px;
-  margin: 0 auto;
-  box-sizing: border-box;
+
+  --scrollbar-width: calc(100vw - 100%);
+  --indent: 20px;
+
+  padding-left: var(--indent);
+  padding-right: calc(var(--indent) - var(--scrollbar-width));
+
+  @media (min-width: 768px) {
+    padding-left: 70px;
+    padding-right: 66px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-left: 110px;
+    padding-right: calc(110px - calc(100vw - 100%));
+  }
 }

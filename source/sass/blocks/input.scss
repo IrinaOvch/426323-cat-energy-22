@@ -17,7 +17,7 @@
 .input[type="checkbox"] + .main-form__label::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: -5px;
   left: 1px;
   border: 1px solid var(--basic-dark-grey);
   width: 28px;
@@ -26,9 +26,13 @@
   @media (min-width: 768px) {
     width: 38px;
     height: 38px;
-    top: -5px;
     left: 0;
   }
+}
+
+.input[type="radio"]:hover + .main-form__label::before,
+.input[type="checkbox"]:hover + .main-form__label::before {
+  border: 1px solid var(--basic-dark-grey-hover);
 }
 
 .input[type="radio"]:focus-visible + .main-form__label::before,
@@ -53,7 +57,7 @@
 .input[type="radio"]:checked + .main-form__label::after {
   width: 14px;
   height: 14px;
-  top: 5px;
+  top: 3px;
   left: 9px;
   background-color: var(--basic-green);
   border-radius: 50%;
@@ -129,14 +133,6 @@
   }
 }
 
-.input--state_error {
-  border: 1px solid var(--status-error);
-
-  &::after {
-    background-color: var(--status-error);
-  }
-}
-
 .input {
   width: 100%;
   padding: 13px 14px;
@@ -178,12 +174,24 @@
   margin-left: 0;
   padding-top: 8px;
   padding-right: 10px;
+  margin-bottom: -4px;
 
   @media (min-width: 768px) {
     min-height: 174px;
+    margin-bottom: -9px;
   }
 
   @media (min-width: 1440px) {
     margin-bottom: -8px;
+  }
+}
+
+.input--state_error:invalid {
+  border: 1px solid var(--status-error);
+}
+
+.input--state_error:invalid + .main-form__label {
+  &::after {
+    background-color: var(--status-error);
   }
 }

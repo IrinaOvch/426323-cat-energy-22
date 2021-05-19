@@ -2,30 +2,20 @@
   list-style: none;
   margin-top: 37px;
   padding: 0;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (min-width: 768px) {
-    --scrollbar-width: calc(100vw - 100%);
-    --indent: 30px;
-    padding-left: var(--indent);
-    padding-right: calc(var(--indent) - var(--scrollbar-width));
-    margin-left: auto;
-    margin-right: auto;
-
     margin-top: 163px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 140px;
+    row-gap: 143px;
   }
 
   @media (min-width: 1440px) {
-    --indent: 110px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 145px;
     margin-top: 164px;
+    margin-bottom: 12px;
   }
 }
